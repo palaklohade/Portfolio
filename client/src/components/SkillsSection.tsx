@@ -48,7 +48,7 @@ export function SkillsSection() {
               <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Core Skills</h3>
               
               <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 variants={containerVariants}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
@@ -57,11 +57,11 @@ export function SkillsSection() {
                   <motion.div 
                     key={index}
                     className={cn(
-                      "p-6 rounded-xl shadow-lg backdrop-blur-sm border",
-                      skill.color === 'primary' ? "bg-primary/5 border-primary/20" :
-                      skill.color === 'secondary' ? "bg-secondary/5 border-secondary/20" :
-                      skill.color === 'accent' ? "bg-accent/5 border-accent/20" :
-                      "bg-gray-50/5 border-gray-200/20"
+                      "p-6 rounded-xl shadow-lg backdrop-blur-sm border transition-all duration-300 hover:scale-105",
+                      skill.color === 'primary' ? "bg-primary/5 border-primary/20 hover:bg-primary/10" :
+                      skill.color === 'secondary' ? "bg-secondary/5 border-secondary/20 hover:bg-secondary/10" :
+                      skill.color === 'accent' ? "bg-accent/5 border-accent/20 hover:bg-accent/10" :
+                      "bg-gray-50/5 border-gray-200/20 hover:bg-gray-100/10"
                     )}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
