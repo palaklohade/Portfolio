@@ -10,7 +10,29 @@ export function HeroSection() {
   const { displayText } = useTypingEffect({ words: professions });
 
   return (
-    <section id="home" className="min-h-screen pt-28 pb-16 flex flex-col justify-center bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section id="home" className="min-h-screen pt-28 pb-16 flex flex-col justify-center bg-black relative overflow-hidden">
+      <div className="absolute inset-0 opacity-20">
+        {Array.from({ length: 25 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute text-primary animate-matrix-fall"
+            style={{
+              left: `${(i / 25) * 100}%`,
+              animationDelay: `${Math.random() * 2}s`,
+              fontSize: '1.2rem'
+            }}
+          >
+            {Array.from({ length: 30 }).map((_, j) => (
+              <div
+                key={j}
+                style={{ animationDelay: `${Math.random() * 5}s` }}
+              >
+                {Math.random() > 0.5 ? '1' : '0'}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <motion.div 
@@ -19,8 +41,8 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-primary dark:text-blue-400 font-medium mb-4">Hi there, I'm</p>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-800 dark:text-white">Palak Lohade</h1>
+            <p className="text-primary font-medium mb-4 z-10">Hi there, I'm</p>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white z-10">Palak Lohade</h1>
             
             <div className="flex flex-wrap my-4">
               <div className="flex items-center mr-5 mb-3">

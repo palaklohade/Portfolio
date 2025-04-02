@@ -11,6 +11,15 @@
   }
 }
 
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); }
+  50% { text-shadow: 0 0 20px rgba(0, 255, 0, 0.8); }
+}
+
+.text-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
 .animate-matrix-fall {
   animation: matrix-fall 10s linear infinite;
 }
