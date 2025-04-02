@@ -32,9 +32,10 @@ export function ExperienceSection() {
   return (
     <section 
       id="experience" 
-      className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
+      className="py-20 bg-black relative overflow-hidden"
       ref={sectionRef}
     >
+      <MatrixBackground opacity={0.1} />
       <div className="container mx-auto px-6">
         <div 
           className="mb-12"
