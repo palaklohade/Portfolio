@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Code, Robot, Palette, Smartphone } from "lucide-react";
+import { Code, Cpu, Palette, Smartphone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
@@ -91,7 +91,7 @@ export function AboutSection() {
                 variants={itemVariants}
               >
                 <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-4">
-                  <Robot className="text-secondary dark:text-purple-400" />
+                  <Cpu className="text-secondary dark:text-purple-400" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">Gen-AI Development</h3>
                 <p className="text-gray-600 dark:text-gray-300">
