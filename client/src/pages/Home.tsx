@@ -58,14 +58,24 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <motion.h1 
-          className="text-6xl md:text-8xl font-bold text-white text-center z-10"
-          initial={{ scale: 0.5 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          Palak Lohade
-        </motion.h1>
+        <div className="z-10 text-center">
+          <motion.h1 
+            className="text-6xl md:text-8xl font-bold text-white mb-4"
+            initial={{ scale: 0.5 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            Palak Lohade
+          </motion.h1>
+          <motion.p
+            className="text-xl md:text-2xl text-white/90"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+          >
+            Frontend Developer | Gen-AI Developer | Web Developer
+          </motion.p>
+        </div>
       </motion.div>
     );
   }
