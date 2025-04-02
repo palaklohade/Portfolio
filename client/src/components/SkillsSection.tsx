@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { skillBars, techStack, learning } from "@/data/skillsData";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
-import { Brain, Cloud, Code, GitBranch, Smartphone } from "lucide-react";
+import { Brain, Globe, Code, Binary, Smartphone } from "lucide-react";
 
 const getIcon = (iconName: string) => {
   switch (iconName) {

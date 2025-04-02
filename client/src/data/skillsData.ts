@@ -3,34 +3,34 @@ import { Skill, TechSkill } from "../types";
 
 export const skillBars: Skill[] = [
   {
-    name: "Full Stack Development",
-    description: "Building scalable web applications with modern frameworks",
+    name: "Frontend Development",
+    description: "Building responsive and interactive user interfaces",
     color: "primary",
     icon: "Code"
   },
   {
-    name: "Artificial Intelligence",
-    description: "Developing AI solutions and implementing ML models",
+    name: "Web Development",
+    description: "Creating full-stack web applications with modern technologies",
     color: "secondary",
+    icon: "Globe"
+  },
+  {
+    name: "Gen-AI Development",
+    description: "Implementing LLM solutions and AI-powered applications",
+    color: "accent",
     icon: "Brain"
   },
   {
-    name: "Cloud Architecture",
-    description: "Designing and implementing cloud-native solutions",
-    color: "accent",
-    icon: "Cloud"
-  },
-  {
-    name: "DevOps & CI/CD",
-    description: "Automating deployment and maintaining infrastructure",
-    color: "yellow-500",
-    icon: "GitBranch"
-  },
-  {
     name: "Mobile Development",
-    description: "Creating cross-platform mobile applications",
-    color: "red-500",
+    description: "Developing cross-platform mobile applications",
+    color: "yellow-500",
     icon: "Smartphone"
+  },
+  {
+    name: "AI/ML",
+    description: "Building and deploying machine learning models",
+    color: "red-500",
+    icon: "Binary"
   }
 ];
 
