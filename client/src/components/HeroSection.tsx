@@ -43,19 +43,19 @@ export function HeroSection() {
           >
             <p className="text-primary font-medium mb-4 z-10">Hi there, I'm</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white z-10">Palak Lohade</h1>
-            
+
             <div className="flex flex-wrap my-4">
               <div className="flex items-center mr-5 mb-3">
                 <div className="w-1 h-10 bg-primary mr-3"></div>
                 <div id="profession-text" className="text-lg md:text-xl font-medium">{displayText}</div>
               </div>
             </div>
-            
+
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
               A pre-final year Computer Science Engineering student passionate about crafting 
               engaging web experiences and exploring the potential of generative AI.
             </p>
-            
+
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="shadow-md hover:shadow-lg" asChild>
                 <a href="#contact">Get in Touch</a>
@@ -70,7 +70,7 @@ export function HeroSection() {
                 href="https://github.com/palaklohade" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors" 
+                className="text-white/70 hover:text-primary transition-colors text-glow" 
                 aria-label="GitHub"
               >
                 <Github size={24} />
@@ -79,7 +79,7 @@ export function HeroSection() {
                 href="https://linkedin.com/in/palaklohade" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors" 
+                className="text-white/70 hover:text-primary transition-colors text-glow" 
                 aria-label="LinkedIn"
               >
                 <Linkedin size={24} />
@@ -88,7 +88,7 @@ export function HeroSection() {
                 href="https://twitter.com/palaklohade" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors" 
+                className="text-white/70 hover:text-primary transition-colors text-glow" 
                 aria-label="Twitter"
               >
                 <Twitter size={24} />
@@ -97,14 +97,14 @@ export function HeroSection() {
                 href="https://medium.com/@palaklohade" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors" 
+                className="text-white/70 hover:text-primary transition-colors text-glow" 
                 aria-label="Medium"
               >
                 <FaMedium size={24} />
               </a>
             </div>
           </motion.div>
-          
+
           <motion.div 
             className="order-1 lg:order-2"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -122,7 +122,7 @@ export function HeroSection() {
           </motion.div>
         </div>
       </div>
-      
+
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
         <a 
           href="#about" 

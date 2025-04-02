@@ -8,7 +8,7 @@ export function AboutSection() {
   const { registerElement } = useScrollAnimation();
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -18,7 +18,7 @@ export function AboutSection() {
       }
     }
   };
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -33,7 +33,7 @@ export function AboutSection() {
   return (
     <section 
       id="about" 
-      className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+      className="py-20 bg-gray-700 dark:bg-gray-900 transition-colors duration-300"  //Minor background color change
       ref={sectionRef}
     >
       <div className="container mx-auto px-6">
@@ -41,10 +41,10 @@ export function AboutSection() {
           className="mb-12"
           ref={el => registerElement(el)}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-white">About Me</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             ref={el => registerElement(el)}
@@ -65,7 +65,7 @@ export function AboutSection() {
               </p>
             </div>
           </motion.div>
-          
+
           <div ref={el => registerElement(el)}>
             <motion.div 
               className="grid grid-cols-1 sm:grid-cols-2 gap-6"
@@ -85,7 +85,7 @@ export function AboutSection() {
                   Building responsive and interactive web applications with React, JavaScript, and modern frontend technologies.
                 </p>
               </motion.div>
-              
+
               <motion.div 
                 className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700"
                 variants={itemVariants}
@@ -98,7 +98,7 @@ export function AboutSection() {
                   Exploring and implementing LLM models and RAG techniques to create innovative AI-powered solutions.
                 </p>
               </motion.div>
-              
+
               <motion.div 
                 className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700"
                 variants={itemVariants}
@@ -111,7 +111,7 @@ export function AboutSection() {
                   Creating intuitive and visually appealing user interfaces with a focus on exceptional user experience.
                 </p>
               </motion.div>
-              
+
               <motion.div 
                 className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700"
                 variants={itemVariants}
