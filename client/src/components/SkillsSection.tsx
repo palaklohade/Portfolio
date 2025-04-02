@@ -32,7 +32,7 @@ export function SkillsSection() {
   return (
     <section 
       id="skills" 
-      className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
+      className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
       ref={sectionRef}
     >
       <div className="container mx-auto px-6">
@@ -57,10 +57,10 @@ export function SkillsSection() {
                     key={index}
                     className={cn(
                       "p-6 rounded-xl shadow-lg backdrop-blur-sm border transition-all duration-300 hover:scale-105",
-                      skill.color === 'primary' ? "bg-primary/5 border-primary/20 hover:bg-primary/10" :
-                      skill.color === 'secondary' ? "bg-secondary/5 border-secondary/20 hover:bg-secondary/10" :
-                      skill.color === 'accent' ? "bg-accent/5 border-accent/20 hover:bg-accent/10" :
-                      "bg-gray-50/5 border-gray-200/20 hover:bg-gray-100/10"
+                      skill.color === 'primary' ? "bg-primary/10 dark:bg-primary/5 border-primary/30 dark:border-primary/20 hover:bg-primary/20 dark:hover:bg-primary/10" :
+                      skill.color === 'secondary' ? "bg-secondary/10 dark:bg-secondary/5 border-secondary/30 dark:border-secondary/20 hover:bg-secondary/20 dark:hover:bg-secondary/10" :
+                      skill.color === 'accent' ? "bg-accent/10 dark:bg-accent/5 border-accent/30 dark:border-accent/20 hover:bg-accent/20 dark:hover:bg-accent/10" :
+                      "bg-gray-200/50 dark:bg-gray-50/5 border-gray-300 dark:border-gray-200/20 hover:bg-gray-200/80 dark:hover:bg-gray-100/10"
                     )}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -102,11 +102,11 @@ export function SkillsSection() {
                     key={index}
                     className={cn(
                       "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
-                      tech.category === 'frontend' ? "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" :
-                      tech.category === 'backend' ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" :
-                      tech.category === 'ai' ? "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300" :
-                      tech.category === 'devops' ? "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300" :
-                      "bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-300"
+                      tech.category === 'frontend' ? "bg-blue-200 text-blue-900 dark:bg-blue-900/30 dark:text-blue-300" :
+                      tech.category === 'backend' ? "bg-green-200 text-green-900 dark:bg-green-900/30 dark:text-green-300" :
+                      tech.category === 'ai' ? "bg-purple-200 text-purple-900 dark:bg-purple-900/30 dark:text-purple-300" :
+                      tech.category === 'devops' ? "bg-orange-200 text-orange-900 dark:bg-orange-900/30 dark:text-orange-300" :
+                      "bg-gray-200 text-gray-900 dark:bg-gray-900/30 dark:text-gray-300"
                     )}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
