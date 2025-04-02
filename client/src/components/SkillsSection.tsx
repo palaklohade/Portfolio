@@ -1,4 +1,3 @@
-
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { skillBars, techStack, learning } from "@/data/skillsData";
@@ -44,7 +43,8 @@ export function SkillsSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div ref={el => registerElement(el)}>
-            <div className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-lg rounded-xl shadow-xl p-8 h-full border border-gray-200/50 dark:border-gray-700/50 hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300">
+            <MatrixBackground opacity={0.1} />
+            <div className="bg-black/40 backdrop-blur-sm rounded-xl shadow-xl p-8 h-full border border-primary/20 hover:border-primary/40 transition-all duration-300">
               <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Core Skills</h3>
 
               <motion.div 
@@ -89,7 +89,8 @@ export function SkillsSection() {
           </div>
 
           <div ref={el => registerElement(el)}>
-            <div className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-lg rounded-xl shadow-xl p-8 h-full border border-gray-200/50 dark:border-gray-700/50 hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300">
+            <MatrixBackground opacity={0.1} />
+            <div className="bg-black/40 backdrop-blur-sm rounded-xl shadow-xl p-8 h-full border border-primary/20 hover:border-primary/40 transition-all duration-300">
               <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Tech Stack</h3>
 
               <motion.div 

@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { MatrixBackground } from "./MatrixBackground";
 import { motion, useInView } from "framer-motion";
 import { Code, Cpu, Palette, Smartphone } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -33,7 +34,7 @@ export function AboutSection() {
   return (
     <section 
       id="about" 
-      className="py-20 bg-gray-700 dark:bg-gray-900 transition-colors duration-300"  //Minor background color change
+      className="py-20 bg-black/50 relative overflow-hidden"  //Minor background color change
       ref={sectionRef}
     >
       <div className="container mx-auto px-6">
@@ -52,7 +53,8 @@ export function AboutSection() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            <div className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8 border border-gray-200 dark:border-gray-700">
+            <MatrixBackground opacity={0.1} />
+            <div className="bg-black/40 backdrop-blur-sm rounded-xl shadow-lg p-8 border border-primary/20">
               <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Who I Am</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 I'm a pre-final year Computer Science Engineering student at Parul University, Vadodara, Gujarat, with a passion for web development and generative AI.
