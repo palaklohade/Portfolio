@@ -14,8 +14,9 @@ export interface Project {
 
 export interface Skill {
   name: string;
-  percentage: number;
+  description: string;
   color: string;
+  icon: string;
 }
 
 export interface TechSkill {

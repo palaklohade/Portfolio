@@ -48,7 +48,7 @@ export function SkillsSection() {
               <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Core Skills</h3>
               
               <motion.div 
-                className="space-y-6"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
                 variants={containerVariants}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
@@ -56,38 +56,31 @@ export function SkillsSection() {
                 {skillBars.map((skill, index) => (
                   <motion.div 
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    className={cn(
+                      "p-6 rounded-xl shadow-lg backdrop-blur-sm border",
+                      skill.color === 'primary' ? "bg-primary/5 border-primary/20" :
+                      skill.color === 'secondary' ? "bg-secondary/5 border-secondary/20" :
+                      skill.color === 'accent' ? "bg-accent/5 border-accent/20" :
+                      "bg-gray-50/5 border-gray-200/20"
+                    )}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center space-x-2">
-                        <div className={cn(
-                          "p-2 rounded-lg",
-                          skill.color === 'primary' ? "bg-primary/10 text-primary" :
-                          skill.color === 'secondary' ? "bg-secondary/10 text-secondary" :
-                          skill.color === 'accent' ? "bg-accent/10 text-accent" :
-                          `bg-${skill.color}/10 text-${skill.color}`
-                        )}>
-                          {getIcon(skill.icon)}
-                        </div>
-                        <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
+                    <div className="flex items-center space-x-4">
+                      <div className={cn(
+                        "p-3 rounded-lg",
+                        skill.color === 'primary' ? "bg-primary/10 text-primary" :
+                        skill.color === 'secondary' ? "bg-secondary/10 text-secondary" :
+                        skill.color === 'accent' ? "bg-accent/10 text-accent" :
+                        `bg-${skill.color}/10 text-${skill.color}`
+                      )}>
+                        {getIcon(skill.icon)}
                       </div>
-                      <span className="font-semibold text-gray-900 dark:text-gray-100">{skill.percentage}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
-                      <motion.div 
-                        className={cn(
-                          "h-2.5 rounded-full transition-all duration-700",
-                          skill.color === 'primary' ? "bg-primary" :
-                          skill.color === 'secondary' ? "bg-secondary" :
-                          skill.color === 'accent' ? "bg-accent" :
-                          `bg-${skill.color}`
-                        )}
-                        initial={{ width: 0 }}
-                        animate={{ width: `${skill.percentage}%` }}
-                        transition={{ duration: 1, delay: index * 0.2 }}
-                      />
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 dark:text-white">{skill.name}</h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{skill.description}</p>
+                      </div>
                     </div>
                   </motion.div>
                 ))}
