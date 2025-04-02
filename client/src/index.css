@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes matrix-fall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.animate-matrix-fall {
+  animation: matrix-fall 10s linear infinite;
+}
+
 @layer base {
   * {
     @apply border-border;
