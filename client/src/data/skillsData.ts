@@ -1,52 +1,56 @@
+
 import { Skill, TechSkill } from "../types";
 
 export const skillBars: Skill[] = [
   {
-    name: "Frontend Development",
+    name: "Full Stack Development",
     percentage: 90,
-    color: "primary"
+    color: "primary",
+    icon: "Code"
   },
   {
-    name: "Generative AI Development",
-    percentage: 75,
-    color: "secondary"
+    name: "Artificial Intelligence",
+    percentage: 85,
+    color: "secondary",
+    icon: "Brain"
   },
   {
-    name: "UI/UX Design",
+    name: "Cloud Architecture",
     percentage: 80,
-    color: "accent"
+    color: "accent",
+    icon: "Cloud"
   },
   {
-    name: "Android Development",
+    name: "DevOps & CI/CD",
+    percentage: 75,
+    color: "yellow-500",
+    icon: "GitBranch"
+  },
+  {
+    name: "Mobile Development",
     percentage: 70,
-    color: "yellow-500"
-  },
-  {
-    name: "Backend Development",
-    percentage: 60,
-    color: "red-500"
+    color: "red-500",
+    icon: "Smartphone"
   }
 ];
 
 export const techStack: TechSkill[] = [
-  { name: "React" },
-  { name: "JavaScript" },
-  { name: "HTML" },
-  { name: "CSS" },
-  { name: "LLM Models" },
-  { name: "RAG" },
-  { name: "MongoDB" },
-  { name: "Git" },
-  { name: "GitHub" },
-  { name: "UI/UX" },
-  { name: "Android Development" },
-  { name: "Python" },
-  { name: "Node.js" },
-  { name: "Express" }
+  { name: "React", category: "frontend" },
+  { name: "TypeScript", category: "frontend" },
+  { name: "Next.js", category: "frontend" },
+  { name: "Node.js", category: "backend" },
+  { name: "Python", category: "backend" },
+  { name: "PostgreSQL", category: "backend" },
+  { name: "TensorFlow", category: "ai" },
+  { name: "PyTorch", category: "ai" },
+  { name: "Docker", category: "devops" },
+  { name: "AWS", category: "devops" },
+  { name: "Git", category: "devops" },
+  { name: "React Native", category: "mobile" }
 ];
 
 export const learning: TechSkill[] = [
-  { name: "Data Structures & Algorithms" },
-  { name: "Advanced LLM Techniques" },
-  { name: "System Design" }
+  { name: "Web3", category: "emerging" },
+  { name: "Rust", category: "emerging" },
+  { name: "Kubernetes", category: "devops" }
 ];
