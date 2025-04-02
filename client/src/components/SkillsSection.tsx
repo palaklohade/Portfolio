@@ -1,4 +1,3 @@
-
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { skillBars, techStack, learning } from "@/data/skillsData";
@@ -21,7 +20,7 @@ export function SkillsSection() {
   const { registerElement } = useScrollAnimation();
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -29,7 +28,7 @@ export function SkillsSection() {
       transition: { staggerChildren: 0.1 }
     }
   };
-  
+
   return (
     <section 
       id="skills" 
@@ -41,12 +40,12 @@ export function SkillsSection() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Technical Expertise</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div ref={el => registerElement(el)}>
             <div className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg p-8 h-full border border-gray-200 dark:border-gray-700">
               <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Core Skills</h3>
-              
+
               <motion.div 
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 variants={containerVariants}
@@ -79,7 +78,7 @@ export function SkillsSection() {
                       </div>
                       <div>
                         <h4 className="text-lg font-semibold text-gray-900 dark:text-white">{skill.name}</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{skill.description}</p>
+                        <p className="text-sm text-gray-700 dark:text-gray-300 mt-1">{skill.description}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -87,11 +86,11 @@ export function SkillsSection() {
               </motion.div>
             </div>
           </div>
-          
+
           <div ref={el => registerElement(el)}>
             <div className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg p-8 h-full border border-gray-200 dark:border-gray-700">
               <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Tech Stack</h3>
-              
+
               <motion.div 
                 className="flex flex-wrap gap-3"
                 variants={containerVariants}
@@ -117,9 +116,9 @@ export function SkillsSection() {
                   </motion.span>
                 ))}
               </motion.div>
-              
+
               <h3 className="text-2xl font-bold my-6 text-gray-800 dark:text-white">Currently Learning</h3>
-              
+
               <motion.div 
                 className="flex flex-wrap gap-3"
                 variants={containerVariants}
