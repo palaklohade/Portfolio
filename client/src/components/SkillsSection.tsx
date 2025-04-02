@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { MatrixBackground } from "./MatrixBackground";
 import { motion, useInView } from "framer-motion";
 import { skillBars, techStack, learning } from "@/data/skillsData";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
