@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { MatrixBackground } from "./MatrixBackground";
 import { motion, useInView } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";

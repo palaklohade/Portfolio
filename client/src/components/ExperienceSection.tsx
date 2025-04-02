@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { MatrixBackground } from "./MatrixBackground";
 import { motion, useInView } from "framer-motion";
 import { GraduationCap, Briefcase, CheckCircle, Trophy } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";

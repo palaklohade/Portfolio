@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { MatrixBackground } from "./MatrixBackground";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { projects, projectCategories } from "@/data/projectsData";
 import { Github, ExternalLink, Trophy, FileText, GitBranch } from "lucide-react";
