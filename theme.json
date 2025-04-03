@@ -1,6 +1,6 @@
 
 {
-  "variant": "default",
+  "variant": "dark",
   "primary": "hsl(222, 61%, 11%)",
   "background": "hsl(225, 25%, 15%)",
   "accent": "hsl(171, 100%, 70%)",
