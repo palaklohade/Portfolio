@@ -1,13 +1,10 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --primary: #0A192F;
-  --background: #1C2331;
-  --accent: #64FFDA;
-  --cta: #FFFFFF;
-  --gold: #FFD700;
+  --matrix-primary: #00ff41;
 }
 
 body {
