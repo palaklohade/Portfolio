@@ -65,10 +65,10 @@ export const projects: Project[] = [
     id: 7,
     title: "CityPlus Explorer",
     description: "A comprehensive travel companion platform that helps users discover extraordinary places, from cultural treasures to local dining spots, with personalized recommendations based on preferences and location.",
-    image: "/attached_assets/Screenshot 2025-04-03 142956.png",
+    image: "./attached_assets/Screenshot 2025-04-03 142956.png",
     screenshots: [
-      "/attached_assets/Screenshot 2025-04-03 143015.png",
-      "/attached_assets/Screenshot 2025-04-03 143034.png"
+      "./attached_assets/Screenshot 2025-04-03 143015.png",
+      "./attached_assets/Screenshot 2025-04-03 143034.png"
     ],
     category: "web",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
