@@ -84,7 +84,10 @@ export function ProjectsSection() {
                 className="project-card"
                 data-category={project.category}
               >
-                <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 h-full transition-transform hover:-translate-y-2 hover:shadow-xl">
+                <div 
+  className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 h-full transition-transform hover:-translate-y-2 hover:shadow-xl cursor-pointer"
+  onClick={() => window.location.href = `/project/${project.id}`}
+>
                   <div className="relative h-48 overflow-hidden">
                     <img 
                       src={project.image} 

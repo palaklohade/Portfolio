@@ -10,6 +10,8 @@ export interface Project {
   inProgress?: boolean;
   isHackathon?: boolean;
   researchPaper?: string;
+  videoUrl?: string;
+  screenshots?: string[];
 }
 
 export interface Skill {
