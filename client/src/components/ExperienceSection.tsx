@@ -75,30 +75,6 @@ export function ExperienceSection() {
                   </p>
                 </div>
               </motion.div>
-
-              <motion.div 
-                className="relative pl-8 border-l-2 border-gray-300 dark:border-gray-700"
-                variants={itemVariants}
-              >
-                <div className="absolute -left-[9px] top-0 w-4 h-4 bg-primary dark:bg-blue-500 rounded-full"></div>
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
-                  <h4 className="text-xl font-bold text-gray-800 dark:text-white">Additional Certifications</h4>
-                  <ul className="mt-4 space-y-3 text-gray-600 dark:text-gray-300">
-                    <li className="flex items-start">
-                      <CheckCircle className="text-primary dark:text-blue-400 mt-1 mr-2 h-4 w-4" />
-                      <span>Web Development Bootcamp - Udemy</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-primary dark:text-blue-400 mt-1 mr-2 h-4 w-4" />
-                      <span>Introduction to LLMs and Generative AI - DeepLearning.AI</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-primary dark:text-blue-400 mt-1 mr-2 h-4 w-4" />
-                      <span>UI/UX Design Fundamentals - Google</span>
-                    </li>
-                  </ul>
-                </div>
-              </motion.div>
             </div>
           </motion.div>
 
@@ -153,15 +129,30 @@ export function ExperienceSection() {
                   <ul className="mt-4 space-y-3 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
                       <Trophy className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <span>Hackverse -  [Image Placeholder for Hackverse Project]</span>
+                      <div>
+                        <span className="font-semibold">Hackverse</span>
+                        <p>Role: Full-stack Developer & UI Designer</p>
+                        <p>• Developed the frontend using React and implemented responsive design</p>
+                        <p>• Integrated backend APIs and handled data management</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <Trophy className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <span>All India Women’s Hackathon - [Image Placeholder for AIWH Project]</span>
+                      <div>
+                        <span className="font-semibold">All India Women's Hackathon</span>
+                        <p>Role: Team Lead & Backend Developer</p>
+                        <p>• Led a team of 4 members and managed project timeline</p>
+                        <p>• Implemented core backend functionality and database design</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <Trophy className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <span>AI/ML Hackathon - [Image Placeholder for AI/ML Project]</span>
+                      <div>
+                        <span className="font-semibold">AI/ML Hackathon</span>
+                        <p>Role: ML Engineer & API Developer</p>
+                        <p>• Developed and trained ML models for the project</p>
+                        <p>• Created RESTful APIs for model integration</p>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -178,15 +169,15 @@ export function ExperienceSection() {
                   <ul className="mt-4 space-y-3 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
                       <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <span>LeetCode - [Image Placeholder for LeetCode solutions/achievements]</span>
+                      <span>LeetCode</span>
                     </li>
                     <li className="flex items-start">
                       <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <span>CodeChef - [Image Placeholder for CodeChef solutions/achievements]</span>
+                      <span>CodeChef</span>
                     </li>
                     <li className="flex items-start">
                       <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <span>AtCoder - [Image Placeholder for AtCoder solutions/achievements]</span>
+                      <span>AtCoder</span>
                     </li>
                   </ul>
                 </div>
