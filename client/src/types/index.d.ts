@@ -12,6 +12,11 @@ export interface Project {
   researchPaper?: string;
   videoUrl?: string;
   screenshots?: string[];
+  timeline?: {
+    start: string;
+    end: string;
+    status: string;
+  };
 }
 
 export interface Skill {

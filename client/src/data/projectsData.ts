@@ -72,6 +72,11 @@ export const projects: Project[] = [
     ],
     category: "web",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
+    timeline: {
+      start: "March 2024",
+      end: "April 2024",
+      status: "Completed"
+    },
     features: [
       "Category-based exploration (Art & Museums, Food & Dining, Architecture, etc.)",
       "Personalized recommendations based on user preferences",

@@ -54,7 +54,42 @@ export default function ProjectDetails() {
               ))}
             </div>
 
-            <div className="flex gap-4 mb-8">
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold mb-3">Tech Stack</h3>
+              <div className="flex flex-wrap gap-3">
+                {project.technologies.map((tech, index) => (
+                  <div 
+                    key={index}
+                    className="flex items-center gap-2 bg-primary/5 dark:bg-primary/10 px-4 py-2 rounded-full"
+                  >
+                    <span className="text-sm font-medium">{tech}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {project.timeline && (
+                <div className="mb-6 p-4 bg-primary/5 dark:bg-primary/10 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3">Project Timeline</h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Started</p>
+                      <p className="font-medium">{project.timeline.start}</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Completed</p>
+                      <p className="font-medium">{project.timeline.end}</p>
+                    </div>
+                  </div>
+                  <div className="mt-2">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                      {project.timeline.status}
+                    </span>
+                  </div>
+                </div>
+              )}
+
+              <div className="flex gap-4 mb-8">
               {project.githubLink && (
                 <Button asChild>
                   <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
