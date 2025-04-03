@@ -69,7 +69,7 @@ export function ExperienceSection() {
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
                   <h4 className="text-xl font-bold text-gray-800 dark:text-white">B.Tech in Computer Science Engineering</h4>
                   <p className="text-primary dark:text-blue-400 font-medium">Parul University, Vadodara, Gujarat</p>
-                  <p className="text-gray-600 dark:text-gray-300 mt-2">Expected Graduation: 2025</p>
+                  <p className="text-gray-600 dark:text-gray-300 mt-2">Expected Graduation: 2026</p>
                   <p className="text-gray-600 dark:text-gray-300 mt-4">
                     Currently in pre-final year, focusing on modern development technologies and AI/ML applications.
                   </p>

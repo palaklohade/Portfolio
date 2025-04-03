@@ -66,7 +66,7 @@ export const projects: Project[] = [
     title: "CityPlus Explorer",
     description: "A travel companion app that suggests interesting places to visit based on user preferences and location data.",
     image: "https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-    category: "mobile",
+    category: "web",
     technologies: ["Android", "Kotlin", "Google Maps API", "UI/UX"],
     githubLink: "https://github.com/palaklohade/cityplus-explorer",
     isHackathon: true
