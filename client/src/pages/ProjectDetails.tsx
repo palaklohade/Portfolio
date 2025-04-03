@@ -66,27 +66,42 @@ export default function ProjectDetails() {
           </div>
 
           <div className="space-y-8">
-            {project.videoUrl && (
-              <div className="aspect-video rounded-xl overflow-hidden">
-                <iframe
-                  src={project.videoUrl}
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+            <Carousel className="w-full">
+              <CarouselContent>
+                <CarouselItem>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="rounded-xl w-full aspect-video object-cover"
+                  />
+                </CarouselItem>
+                {project.screenshots?.map((screenshot, index) => (
+                  <CarouselItem key={index}>
+                    <img
+                      src={screenshot}
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      className="rounded-xl w-full aspect-video object-cover"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+
+            {project.features && (
+              <div className="mt-8">
+                <h2 className="text-2xl font-bold mb-4">Key Features</h2>
+                <ul className="space-y-2">
+                  {project.features.map((feature, index) => (
+                    <li key={index} className="flex items-start">
+                      <Check className="h-5 w-5 mr-2 mt-1 text-primary" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
-            
-            <div className="grid grid-cols-2 gap-4">
-              {project.screenshots?.map((screenshot, index) => (
-                <img
-                  key={index}
-                  src={screenshot}
-                  alt={`${project.title} screenshot ${index + 1}`}
-                  className="rounded-xl w-full h-48 object-cover"
-                />
-              ))}
-            </div>
           </div>
         </div>
       </div>

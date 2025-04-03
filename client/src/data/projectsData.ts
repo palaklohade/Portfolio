@@ -64,11 +64,23 @@ export const projects: Project[] = [
   {
     id: 7,
     title: "CityPlus Explorer",
-    description: "A travel companion app that suggests interesting places to visit based on user preferences and location data.",
-    image: "https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+    description: "A comprehensive travel companion platform that helps users discover extraordinary places, from cultural treasures to local dining spots, with personalized recommendations based on preferences and location.",
+    image: "/attached_assets/Screenshot 2025-04-03 142956.png",
+    screenshots: [
+      "/attached_assets/Screenshot 2025-04-03 143015.png",
+      "/attached_assets/Screenshot 2025-04-03 143034.png"
+    ],
     category: "web",
-    technologies: ["Android", "Kotlin", "Google Maps API", "UI/UX"],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
+    features: [
+      "Category-based exploration (Art & Museums, Food & Dining, Architecture, etc.)",
+      "Personalized recommendations based on user preferences",
+      "Interactive location-based search",
+      "User collections and favorites",
+      "Detailed place information with ratings and reviews"
+    ],
     githubLink: "https://github.com/palaklohade/cityplus-explorer",
+    demoLink: "https://cityplus-explorer.repl.co",
     isHackathon: true
   }
 ];
