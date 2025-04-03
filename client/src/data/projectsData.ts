@@ -70,6 +70,7 @@ export const projects: Project[] = [
       "./attached_assets/Screenshot 2025-04-03 143015.png",
       "./attached_assets/Screenshot 2025-04-03 143034.png"
     ],
+    videoUrl: "https://www.youtube.com/embed/your-video-id",
     category: "web",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
     timeline: {

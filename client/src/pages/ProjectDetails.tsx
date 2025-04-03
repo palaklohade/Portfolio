@@ -108,28 +108,46 @@ export default function ProjectDetails() {
           </div>
 
           <div className="space-y-8">
-            <Carousel className="w-full">
-              <CarouselContent>
-                <CarouselItem>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="rounded-xl w-full aspect-video object-cover"
-                  />
-                </CarouselItem>
-                {project.screenshots?.map((screenshot, index) => (
-                  <CarouselItem key={index}>
+            <div className="bg-black/5 dark:bg-white/5 rounded-xl p-6">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  <CarouselItem>
                     <img
-                      src={screenshot}
-                      alt={`${project.title} screenshot ${index + 1}`}
-                      className="rounded-xl w-full aspect-video object-cover"
+                      src={project.image}
+                      alt={project.title}
+                      className="rounded-xl w-full aspect-video object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                      onClick={() => window.open(project.image, '_blank')}
                     />
                   </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+                  {project.screenshots?.map((screenshot, index) => (
+                    <CarouselItem key={index}>
+                      <img
+                        src={screenshot}
+                        alt={`${project.title} screenshot ${index + 1}`}
+                        className="rounded-xl w-full aspect-video object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                        onClick={() => window.open(screenshot, '_blank')}
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+
+              {project.videoUrl && (
+                <div className="mt-6">
+                  <h3 className="text-xl font-semibold mb-4">Project Demo</h3>
+                  <div className="relative w-full aspect-video">
+                    <iframe
+                      src={project.videoUrl}
+                      className="absolute inset-0 w-full h-full rounded-xl"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
 
             {project.features && (
               <div className="mt-8">
