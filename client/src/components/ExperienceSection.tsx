@@ -88,7 +88,7 @@ export function ExperienceSection() {
               <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mr-3">
                 <Briefcase className="text-accent dark:text-green-400" />
               </div>
-              Experience
+              Extra-Curricular Activities
             </h3>
 
             <div className="space-y-8">
@@ -98,8 +98,8 @@ export function ExperienceSection() {
               >
                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-accent dark:bg-green-500 rounded-full"></div>
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
-                  <h4 className="text-xl font-bold text-gray-800 dark:text-white">Student Ambassador</h4>
-                  <p className="text-accent dark:text-green-400 font-medium">Technical Event Cell, Parul University</p>
+                  <h4 className="text-xl font-bold text-gray-800 dark:text-white">Technical Leadership</h4>
+                  <p className="text-accent dark:text-green-400 font-medium">Student Ambassador at Technical Event Cell, Parul University</p>
                   <p className="text-gray-600 dark:text-gray-300 mt-2">2022 - Present</p>
                   <ul className="mt-4 space-y-2 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
@@ -124,7 +124,7 @@ export function ExperienceSection() {
               >
                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-accent dark:bg-green-500 rounded-full"></div>
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
-                  <h4 className="text-xl font-bold text-gray-800 dark:text-white">Hackathon Experience:</h4>
+                  <h4 className="text-xl font-bold text-gray-800 dark:text-white">Technical Competitions & Hackathons</h4>
                   <p className="text-accent dark:text-green-400 font-medium">Various Events</p>
                   <ul className="mt-4 space-y-3 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
@@ -164,20 +164,29 @@ export function ExperienceSection() {
               >
                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-accent dark:bg-green-500 rounded-full"></div>
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
-                  <h4 className="text-xl font-bold text-gray-800 dark:text-white">Competitive Programming:</h4>
-                  <p className="text-accent dark:text-green-400 font-medium">Various Platforms</p>
+                  <h4 className="text-xl font-bold text-gray-800 dark:text-white">Programming Achievements</h4>
+                  <p className="text-accent dark:text-green-400 font-medium">Competitive Coding Platforms</p>
                   <ul className="mt-4 space-y-3 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
                       <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <span>LeetCode</span>
+                      <div>
+                        <span className="font-semibold">LeetCode</span>
+                        <p>Active participant with strong problem-solving skills</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <span>CodeChef</span>
+                      <div>
+                        <span className="font-semibold">CodeChef</span>
+                        <p>Regular contestant focused on algorithmic challenges</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <span>AtCoder</span>
+                      <div>
+                        <span className="font-semibold">AtCoder</span>
+                        <p>Participating in competitive programming contests</p>
+                      </div>
                     </li>
                   </ul>
                 </div>
