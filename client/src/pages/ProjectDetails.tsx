@@ -3,8 +3,15 @@ import { useEffect, useState } from "react";
 import { useRoute } from "wouter";
 import { projects } from "@/data/projectsData";
 import { Button } from "@/components/ui/button";
-import { Github, ArrowLeft, ExternalLink } from "lucide-react";
+import { Github, ArrowLeft, ExternalLink, Check } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from "@/components/ui/carousel";
 
 export default function ProjectDetails() {
   const [, params] = useRoute("/project/:id");
