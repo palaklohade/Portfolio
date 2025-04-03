@@ -1,14 +1,14 @@
 import { useRef } from "react";
 import { MatrixBackground } from "./MatrixBackground";
 import { motion, useInView } from "framer-motion";
-import { GraduationCap, Briefcase, CheckCircle, Trophy } from "lucide-react";
+import { GraduationCap, Briefcase, CheckCircle, Trophy, Code, Binary, Award, Star } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export function ExperienceSection() {
   const { registerElement } = useScrollAnimation();
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -18,7 +18,7 @@ export function ExperienceSection() {
       }
     }
   };
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -45,7 +45,7 @@ export function ExperienceSection() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Experience & Education</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <motion.div
             ref={el => registerElement(el)}
@@ -59,7 +59,7 @@ export function ExperienceSection() {
               </div>
               Education
             </h3>
-            
+
             <div className="space-y-8">
               <motion.div 
                 className="relative pl-8 border-l-2 border-gray-300 dark:border-gray-700 pb-8"
@@ -75,7 +75,7 @@ export function ExperienceSection() {
                   </p>
                 </div>
               </motion.div>
-              
+
               <motion.div 
                 className="relative pl-8 border-l-2 border-gray-300 dark:border-gray-700"
                 variants={itemVariants}
@@ -101,7 +101,7 @@ export function ExperienceSection() {
               </motion.div>
             </div>
           </motion.div>
-          
+
           <motion.div
             ref={el => registerElement(el)}
             variants={containerVariants}
@@ -114,7 +114,7 @@ export function ExperienceSection() {
               </div>
               Experience
             </h3>
-            
+
             <div className="space-y-8">
               <motion.div 
                 className="relative pl-8 border-l-2 border-gray-300 dark:border-gray-700 pb-8"
@@ -141,27 +141,52 @@ export function ExperienceSection() {
                   </ul>
                 </div>
               </motion.div>
-              
+
+              <motion.div 
+                className="relative pl-8 border-l-2 border-gray-300 dark:border-gray-700 pb-8"
+                variants={itemVariants}
+              >
+                <div className="absolute -left-[9px] top-0 w-4 h-4 bg-accent dark:bg-green-500 rounded-full"></div>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
+                  <h4 className="text-xl font-bold text-gray-800 dark:text-white">Hackathon Experience:</h4>
+                  <p className="text-accent dark:text-green-400 font-medium">Various Events</p>
+                  <ul className="mt-4 space-y-3 text-gray-600 dark:text-gray-300">
+                    <li className="flex items-start">
+                      <Trophy className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
+                      <span>Hackverse -  [Image Placeholder for Hackverse Project]</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Trophy className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
+                      <span>All India Women’s Hackathon - [Image Placeholder for AIWH Project]</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Trophy className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
+                      <span>AI/ML Hackathon - [Image Placeholder for AI/ML Project]</span>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+
               <motion.div 
                 className="relative pl-8 border-l-2 border-gray-300 dark:border-gray-700"
                 variants={itemVariants}
               >
                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-accent dark:bg-green-500 rounded-full"></div>
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
-                  <h4 className="text-xl font-bold text-gray-800 dark:text-white">Hackathon Achievements</h4>
-                  <p className="text-accent dark:text-green-400 font-medium">Various Events</p>
+                  <h4 className="text-xl font-bold text-gray-800 dark:text-white">Competitive Programming:</h4>
+                  <p className="text-accent dark:text-green-400 font-medium">Various Platforms</p>
                   <ul className="mt-4 space-y-3 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
-                      <Trophy className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <span>Semifinalist - All India Women's Hackathon</span>
+                      <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
+                      <span>LeetCode - [Image Placeholder for LeetCode solutions/achievements]</span>
                     </li>
                     <li className="flex items-start">
-                      <Trophy className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <span>Participant - HackVerse</span>
+                      <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
+                      <span>CodeChef - [Image Placeholder for CodeChef solutions/achievements]</span>
                     </li>
                     <li className="flex items-start">
-                      <Trophy className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <span>Participant - AI/ML Hackathon</span>
+                      <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
+                      <span>AtCoder - [Image Placeholder for AtCoder solutions/achievements]</span>
                     </li>
                   </ul>
                 </div>
