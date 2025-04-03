@@ -9,48 +9,57 @@ export const skillBars: Skill[] = [
     icon: "Code"
   },
   {
-    name: "Web Development",
-    description: "Creating full-stack web applications with modern technologies",
+    name: "Backend Development",
+    description: "Creating robust server-side applications and APIs",
     color: "secondary",
     icon: "Globe"
   },
   {
-    name: "Gen-AI Development",
-    description: "Implementing LLM solutions and AI-powered applications",
+    name: "Data Structures & Algorithms",
+    description: "Problem-solving and optimization techniques",
     color: "accent",
-    icon: "Brain"
-  },
-  {
-    name: "Mobile Development",
-    description: "Developing cross-platform mobile applications",
-    color: "yellow-500",
-    icon: "Smartphone"
-  },
-  {
-    name: "AI/ML",
-    description: "Building and deploying machine learning models",
-    color: "red-500",
     icon: "Binary"
+  },
+  {
+    name: "Database Management",
+    description: "Working with MongoDB and Firebase",
+    color: "yellow-500",
+    icon: "Database"
+  },
+  {
+    name: "API Development",
+    description: "Building and testing RESTful APIs",
+    color: "red-500",
+    icon: "Api"
   }
 ];
 
 export const techStack: TechSkill[] = [
   { name: "React", category: "frontend" },
-  { name: "TypeScript", category: "frontend" },
-  { name: "Next.js", category: "frontend" },
+  { name: "JavaScript", category: "frontend" },
+  { name: "HTML", category: "frontend" },
+  { name: "CSS", category: "frontend" },
   { name: "Node.js", category: "backend" },
+  { name: "Express.js", category: "backend" },
+  { name: "MongoDB", category: "backend" },
   { name: "Python", category: "backend" },
-  { name: "PostgreSQL", category: "backend" },
-  { name: "TensorFlow", category: "ai" },
-  { name: "PyTorch", category: "ai" },
-  { name: "Docker", category: "devops" },
-  { name: "AWS", category: "devops" },
+  { name: "Firebase", category: "backend" },
   { name: "Git", category: "devops" },
-  { name: "React Native", category: "mobile" }
+  { name: "GitHub", category: "devops" },
+  { name: "Authentication", category: "security" },
+  { name: "RESTful APIs", category: "backend" },
+  { name: "Postman", category: "tools" },
+  { name: "Render", category: "devops" },
+  { name: "DSA", category: "core" },
+  { name: "Competitive Programming", category: "core" }
 ];
 
 export const learning: TechSkill[] = [
-  { name: "Web3", category: "emerging" },
-  { name: "Rust", category: "emerging" },
-  { name: "Kubernetes", category: "devops" }
+  { name: "LLMs", category: "ai" },
+  { name: "RAG", category: "ai" },
+  { name: "Neural Networks", category: "ai" },
+  { name: "Hugging Face", category: "ai" },
+  { name: "LangChain", category: "ai" },
+  { name: "TensorFlow", category: "ai" },
+  { name: "PyTorch", category: "ai" }
 ];
