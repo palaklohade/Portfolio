@@ -97,6 +97,13 @@ export default function ProjectDetails() {
                   </a>
                 </Button>
               )}
+                        {project.linkedinLink && (
+              <Button variant="secondary" asChild>
+                <a href={project.linkedinLink} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-4 w-4" /> LinkedIn
+                </a>
+              </Button>
+            )}
               {project.demoLink && (
                 <Button variant="outline" asChild>
                   <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
@@ -124,7 +131,7 @@ export default function ProjectDetails() {
                       <img
                         src={screenshot}
                         alt={`${project.title} screenshot ${index + 1}`}
-                        className="rounded-xl w-full aspect-video object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                        className="rounded-xl w-full aspect-video object-contain cursor-pointer hover:opacity-90 transition-opacity"
                         onClick={() => window.open(screenshot, '_blank')}
                       />
                     </CarouselItem>

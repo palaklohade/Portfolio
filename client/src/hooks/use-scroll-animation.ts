@@ -21,10 +21,8 @@ export function useScrollAnimation() {
   };
 
   useEffect(() => {
-    // Run animation check on initial load
     setTimeout(animateOnScroll, 100);
     
-    // Add event listener for scroll
     window.addEventListener("scroll", animateOnScroll);
     
     return () => {

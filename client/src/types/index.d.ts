@@ -7,11 +7,13 @@ export interface Project {
   technologies: string[];
   githubLink?: string;
   demoLink?: string;
+  linkedinLink?:string;
   inProgress?: boolean;
   isHackathon?: boolean;
   researchPaper?: string;
   videoUrl?: string;
   screenshots?: string[];
+  features?: string[];
   timeline?: {
     start: string;
     end: string;
@@ -27,6 +29,7 @@ export interface Skill {
 }
 
 export interface TechSkill {
+  category: string;
   name: string;
 }
 

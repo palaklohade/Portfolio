@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { MatrixBackground } from "./MatrixBackground";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { projects, projectCategories } from "@/data/projectsData";
-import { Github, ExternalLink, Trophy, FileText, GitBranch } from "lucide-react";
+import { Github, Trophy, FileText, GitBranch } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -88,7 +88,7 @@ export function ProjectsSection() {
   className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 h-full transition-transform hover:-translate-y-2 hover:shadow-xl cursor-pointer"
   onClick={() => window.location.href = `/project/${project.id}`}
 >
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-36 overflow-hidden">
                     <img 
                       src={project.image} 
                       alt={project.title} 
@@ -144,7 +144,7 @@ export function ProjectsSection() {
                           rel="noopener noreferrer"
                           className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors font-medium flex items-center"
                         >
-                          <ExternalLink size={16} className="mr-2" /> Live Demo
+                        
                         </a>
                       )}
                       
@@ -155,7 +155,7 @@ export function ProjectsSection() {
                           rel="noopener noreferrer"
                           className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors font-medium flex items-center"
                         >
-                          <FileText size={16} className="mr-2" /> Research Paper
+            
                         </a>
                       )}
                       
@@ -179,16 +179,15 @@ export function ProjectsSection() {
         </motion.div>
         
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="inline-flex items-center shadow-md" asChild>
-            <a 
-              href="https://github.com/palaklohade"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View All Projects on GitHub <Github className="ml-2" />
-            </a>
-          </Button>
-        </div>
+  <a href="https://github.com/palaklohade" target="_blank" rel="noopener noreferrer">
+    <Button size="lg" variant="outline" className="inline-flex items-center shadow-md">
+      View All Projects on GitHub 
+      <Github className="ml-2 w-5 h-5" />
+    </Button>
+  </a>
+</div>
+
+
       </div>
     </section>
   );

@@ -34,7 +34,7 @@ export function AboutSection() {
   return (
     <section 
       id="about" 
-      className="py-20 bg-black/50 relative overflow-hidden"  //Minor background color change
+      className="py-20 bg-black/50 relative overflow-hidden"  
       ref={sectionRef}
     >
       <div className="container mx-auto px-6">

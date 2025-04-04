@@ -36,7 +36,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-20 z-10">
           {Array.from({ length: 25 }).map((_, i) => (
             <div
               key={i}

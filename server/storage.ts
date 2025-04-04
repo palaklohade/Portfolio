@@ -1,7 +1,6 @@
 import { users, type User, type InsertUser, type ContactSubmission, type InsertContactSubmission } from "@shared/schema";
 
-// modify the interface with any CRUD methods
-// you might need
+
 
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;

@@ -71,7 +71,7 @@ export function ExperienceSection() {
                   <p className="text-primary dark:text-blue-400 font-medium">Parul University, Vadodara, Gujarat</p>
                   <p className="text-gray-600 dark:text-gray-300 mt-2">Expected Graduation: 2026</p>
                   <p className="text-gray-600 dark:text-gray-300 mt-4">
-                    Currently in pre-final year, focusing on modern development technologies and AI/ML applications.
+                    Currently in pre-final year, focusing on modern development technologies and Gen-Ai applications.
                   </p>
                 </div>
               </motion.div>
@@ -131,28 +131,31 @@ export function ExperienceSection() {
                       <Trophy className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
                       <div>
                         <span className="font-semibold">Hackverse</span>
-                        <p>Role: Full-stack Developer & UI Designer</p>
-                        <p>• Developed the frontend using React and implemented responsive design</p>
-                        <p>• Integrated backend APIs and handled data management</p>
+                        <p>Role: Frontend Developer</p>
+                        <p>• Led the development of the EcoTrack Android app's frontend, ensuring a seamless user experience.</p>
+                        <p>• Designed and implemented a responsive, intuitive interface for enhanced accessibility.</p>
                       </div>
+
                     </li>
                     <li className="flex items-start">
                       <Trophy className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
                       <div>
-                        <span className="font-semibold">All India Women's Hackathon</span>
-                        <p>Role: Team Lead & Backend Developer</p>
-                        <p>• Led a team of 4 members and managed project timeline</p>
-                        <p>• Implemented core backend functionality and database design</p>
-                      </div>
+                      <span className="font-semibold">All India Women's Hackathon</span>
+                      <p>Role: Team Lead & Backend Developer</p>
+                      <p>• Led a team of four, driving project execution and ensuring timely delivery.</p>
+                      <p>• Architected the backend, implementing core functionalities and optimizing database design.</p>
+                    </div>
+
                     </li>
                     <li className="flex items-start">
                       <Trophy className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
                       <div>
-                        <span className="font-semibold">AI/ML Hackathon</span>
-                        <p>Role: ML Engineer & API Developer</p>
-                        <p>• Developed and trained ML models for the project</p>
-                        <p>• Created RESTful APIs for model integration</p>
-                      </div>
+                      <span className="font-semibold">AI/ML Hackathon</span>
+                      <p>Role: Frontend Developer</p>
+                      <p>• Engineered the project's frontend, ensuring a seamless user experience.</p>
+                      <p>• Developed RESTful APIs to integrate machine learning models efficiently.</p>
+                    </div>
+
                     </li>
                   </ul>
                 </div>
@@ -167,28 +170,41 @@ export function ExperienceSection() {
                   <h4 className="text-xl font-bold text-gray-800 dark:text-white">Programming Achievements</h4>
                   <p className="text-accent dark:text-green-400 font-medium">Competitive Coding Platforms</p>
                   <ul className="mt-4 space-y-3 text-gray-600 dark:text-gray-300">
-                    <li className="flex items-start">
-                      <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <div>
-                        <span className="font-semibold">LeetCode</span>
-                        <p>Active participant with strong problem-solving skills</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <div>
-                        <span className="font-semibold">CodeChef</span>
-                        <p>Regular contestant focused on algorithmic challenges</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
-                      <div>
-                        <span className="font-semibold">AtCoder</span>
-                        <p>Participating in competitive programming contests</p>
-                      </div>
-                    </li>
-                  </ul>
+                   
+                  <li className="flex items-start">
+                    <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
+                    <div>
+                      <span className="font-semibold">LeetCode</span>
+                      <p>
+                        <a href="https://leetcode.com/u/palaklohade04/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                          View Profile
+                        </a>
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
+                    <div>
+                      <span className="font-semibold">CodeChef</span>
+                      <p>
+                        <a href="https://www.codechef.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                          View Profile
+                        </a>
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Code className="text-accent dark:text-green-400 mt-1 mr-2 h-4 w-4" />
+                    <div>
+                      <span className="font-semibold">AtCoder</span>
+                      <p>
+                        <a href="https://atcoder.jp/users/palaklohade" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                          View Profile
+                        </a>
+                      </p>
+                    </div>
+                  </li>
+                </ul>
                 </div>
               </motion.div>
             </div>

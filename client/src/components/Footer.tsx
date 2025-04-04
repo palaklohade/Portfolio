@@ -28,7 +28,7 @@ export function Footer() {
               <Github size={20} />
             </a>
             <a 
-              href="https://linkedin.com/in/palaklohade" 
+              href="https://www.linkedin.com/in/palak-lohade/" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors" 
@@ -37,7 +37,7 @@ export function Footer() {
               <Linkedin size={20} />
             </a>
             <a 
-              href="https://twitter.com/palaklohade" 
+              href="https://x.com/palak_codes" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors" 
@@ -46,7 +46,7 @@ export function Footer() {
               <Twitter size={20} />
             </a>
             <a 
-              href="https://medium.com/@palaklohade" 
+              href="https://medium.com/@palaklohade04" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors" 

@@ -21,7 +21,6 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   
-  // Handle scroll effect for navbar
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -52,7 +51,6 @@ export function Navbar() {
           <span className="text-primary">Lohade</span>
         </Link>
         
-        {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6 items-center">
           {navLinks.map((link) => (
             <a 
@@ -67,7 +65,6 @@ export function Navbar() {
           <ThemeToggle />
         </div>
         
-        {/* Mobile Menu Button */}
         <button 
           className="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none"
           onClick={toggleMobileMenu}
@@ -77,7 +74,6 @@ export function Navbar() {
         </button>
       </nav>
       
-      {/* Mobile Menu */}
       <div 
         className={cn(
           "md:hidden bg-white dark:bg-gray-900 shadow-lg border-t border-gray-200 dark:border-gray-800 transition-all duration-300",

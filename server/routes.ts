@@ -6,13 +6,10 @@ import { ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Contact form submission route
   app.post("/api/contact", async (req, res) => {
     try {
-      // Validate the request body
       const validatedData = contactSubmissionSchema.parse(req.body);
       
-      // Store the contact submission
       const submission = await storage.createContactSubmission(validatedData);
       
       return res.status(200).json({ success: true, data: submission });

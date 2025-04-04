@@ -4,18 +4,20 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Github, Linkedin, Twitter, FileText } from "lucide-react";
 import { FaMedium } from "react-icons/fa";
 import { cn } from "@/lib/utils";
+import { Link } from "wouter";
+
 
 export function HeroSection() {
-  const professions = ["Frontend Developer", "Web Developer", "Gen-AI Developer", "UI/UX Designer", "Android Developer"];
+  const professions = ["Frontend Developer", "Web Developer", "Gen-AI Developer","Android Developer"];
   const { displayText } = useTypingEffect({ words: professions });
 
   return (
     <section id="home" className="min-h-screen pt-28 pb-16 flex flex-col justify-center bg-black relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
         {Array.from({ length: 25 }).map((_, i) => (
           <div
             key={i}
-            className="absolute text-primary animate-matrix-fall"
+            className="absolute text-primary animate-matrix-fall "
             style={{
               left: `${(i / 25) * 100}%`,
               animationDelay: `${Math.random() * 2}s`,
@@ -36,7 +38,7 @@ export function HeroSection() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <motion.div 
-            className="order-2 lg:order-1"
+            className="order-2 lg:order-1 z-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -70,13 +72,13 @@ export function HeroSection() {
                 href="https://github.com/palaklohade" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-primary transition-colors text-glow" 
+                className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors" 
                 aria-label="GitHub"
               >
                 <Github size={24} />
               </a>
               <a 
-                href="https://linkedin.com/in/palaklohade" 
+                href="https://www.linkedin.com/in/palak-lohade/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/70 hover:text-primary transition-colors text-glow" 
@@ -85,7 +87,7 @@ export function HeroSection() {
                 <Linkedin size={24} />
               </a>
               <a 
-                href="https://twitter.com/palaklohade" 
+                href="https://x.com/palak_codes" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/70 hover:text-primary transition-colors text-glow" 
@@ -94,14 +96,14 @@ export function HeroSection() {
                 <Twitter size={24} />
               </a>
               <a 
-                href="https://medium.com/@palaklohade" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-primary transition-colors text-glow" 
-                aria-label="Medium"
-              >
-                <FaMedium size={24} />
-              </a>
+              href="https://medium.com/@palaklohade04" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors" 
+              aria-label="Medium"
+            >
+              <FaMedium size={20} />
+            </a>
             </div>
           </motion.div>
 
@@ -112,12 +114,10 @@ export function HeroSection() {
             transition={{ duration: 0.8 }}
           >
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-br from-blue-500 via-purple-500 to-blue-500 rounded-full blur-xl opacity-50 animate-gradient"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                alt="Palak Lohade" 
-                className="w-full max-w-md mx-auto rounded-full shadow-2xl z-10 relative aspect-square object-cover"
-              />
+<div className="absolute -inset-1 bg-gradient-to-br from-[#0d0d0d] via-[#1a1a2e] to-[#252b48] rounded-full blur-2xl opacity-60"></div>
+
+             <img src="/no-bg (2).png" alt="Palak Lohade" className="w-full max-w-md mx-auto rounded-full shadow-2xl z-10 relative aspect-square object-cover" />
+
             </div>
           </motion.div>
         </div>

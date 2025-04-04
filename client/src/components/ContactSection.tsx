@@ -94,10 +94,10 @@ export function ContactSection() {
                   <div>
                     <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Email</h4>
                     <a 
-                      href="mailto:palak.lohade@example.com" 
+                      href="mailto:palaklohade04@gmail.com" 
                       className="text-primary dark:text-blue-400 hover:underline"
                     >
-                      palak.lohade@example.com
+                      palaklohade04@gmail.com
                     </a>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ export function ContactSection() {
                   </div>
                 </div>
                 
-                <div className="flex items-start">
+                <div className="flex items-start ">
                   <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mr-4">
                     <Globe className="text-secondary dark:text-purple-400" />
                   </div>
@@ -123,13 +123,13 @@ export function ContactSection() {
                         href="https://github.com/palaklohade" 
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" 
+                        className="text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-200 cursor-pointer" 
                         aria-label="GitHub"
                       >
-                        <Github />
+                        <Github className="w-6 h-6" stroke="currentColor" />
                       </a>
                       <a 
-                        href="https://linkedin.com/in/palaklohade" 
+                        href="https://www.linkedin.com/in/palak-lohade/" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" 
@@ -138,7 +138,7 @@ export function ContactSection() {
                         <Linkedin />
                       </a>
                       <a 
-                        href="https://twitter.com/palaklohade" 
+                        href="https://x.com/palak_codes" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" 
@@ -147,7 +147,7 @@ export function ContactSection() {
                         <Twitter />
                       </a>
                       <a 
-                        href="https://medium.com/@palaklohade" 
+                        href="https://medium.com/@palaklohade04" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" 

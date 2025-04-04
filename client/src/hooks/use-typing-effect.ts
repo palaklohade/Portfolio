@@ -25,28 +25,24 @@ export function useTypingEffect({
     const currentWord = words[wordIndex];
     
     if (isDeleting) {
-      // Deleting text
       setDisplayText(currentWord.substring(0, charIndex - 1));
       setCharIndex(prevCharIndex => prevCharIndex - 1);
       setSpeed(deletingSpeed);
     } else {
-      // Typing text
       setDisplayText(currentWord.substring(0, charIndex + 1));
       setCharIndex(prevCharIndex => prevCharIndex + 1);
       setSpeed(typingSpeed);
     }
     
-    // Change to deleting when typing is complete
     if (!isDeleting && charIndex === currentWord.length) {
       setIsDeleting(true);
-      setSpeed(delayBeforeDeleting); // Wait before deleting
+      setSpeed(delayBeforeDeleting); 
     }
     
-    // Move to next word when deleted
     if (isDeleting && charIndex === 0) {
       setIsDeleting(false);
       setWordIndex(prevWordIndex => (prevWordIndex + 1) % words.length);
-      setSpeed(delayBeforeTyping); // Wait before typing new text
+      setSpeed(delayBeforeTyping); 
     }
   }, [charIndex, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, delayBeforeTyping, delayBeforeDeleting]);
 
