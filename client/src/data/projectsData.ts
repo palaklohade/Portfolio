@@ -145,7 +145,7 @@ export const projects: Project[] = [
 export const projectCategories = [
   { id: "all", name: "All" },
   { id: "ai", name: "Gen AI" },
-  { id: "web", name: "Web Dev" },
+  { id: "web", name: "Web" },
   { id: "mobile", name: "Mobile" },
   { id: "ml", name: "ML/AI" }
 ];

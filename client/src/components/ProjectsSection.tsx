@@ -1,25 +1,16 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { MatrixBackground } from "./MatrixBackground";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { projects, projectCategories } from "@/data/projectsData";
-import { Github, Trophy, FileText, GitBranch } from "lucide-react";
+import { projects } from "@/data/projectsData";
+import { Github, Trophy, GitBranch } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 export function ProjectsSection() {
-  const [filter, setFilter] = useState("all");
   const { registerElement } = useScrollAnimation();
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
-  
-  const handleFilterChange = (category: string) => {
-    setFilter(category);
-  };
-  
-  const filteredProjects = filter === "all" 
-    ? projects 
-    : projects.filter(project => project.category === filter);
 
   return (
     <section 
@@ -35,23 +26,10 @@ export function ProjectsSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">My Projects</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            {projectCategories.map((category) => (
-              <Button
-                key={category.id}
-                onClick={() => handleFilterChange(category.id)}
-                variant={filter === category.id ? "default" : "outline"}
-                className="rounded-full"
-              >
-                {category.name}
-              </Button>
-            ))}
-          </div>
         </div>
-        
+
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 z-10"
           variants={{
             hidden: { opacity: 0 },
             visible: {
@@ -65,7 +43,7 @@ export function ProjectsSection() {
           animate={isInView ? "visible" : "hidden"}
         >
           <AnimatePresence mode="wait">
-            {filteredProjects.map((project) => (
+            {projects.map((project) => (
               <motion.div
                 key={project.id}
                 ref={el => registerElement(el)}
@@ -85,9 +63,9 @@ export function ProjectsSection() {
                 data-category={project.category}
               >
                 <div 
-  className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 h-full transition-transform hover:-translate-y-2 hover:shadow-xl cursor-pointer"
-  onClick={() => window.location.href = `/project/${project.id}`}
->
+                  className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 h-full transition-transform hover:-translate-y-2 hover:shadow-xl cursor-pointer"
+                  onClick={() => window.location.href = `/project/${project.id}`}
+                >
                   <div className="relative h-36 overflow-hidden">
                     <img 
                       src={project.image} 
@@ -102,18 +80,19 @@ export function ProjectsSection() {
                       "bg-purple-500"
                     )}>
                       {project.category === "ai" ? "Gen AI" :
-                      project.category === "web" ? "Web" :
-                      project.category === "mobile" ? "Mobile" :
-                      "ML/AI"}
+                        project.category === "web" ? "Web" :
+                        project.category === "mobile" ? "Mobile" :
+                        project.category === "ml" ? "ML/AI" :
+                        "Other"}
                     </div>
                   </div>
-                  
+
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">{project.title}</h3>
                     <p className="text-gray-600 dark:text-gray-300 mb-4">
                       {project.description}
                     </p>
-                    
+
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, index) => (
                         <span 
@@ -124,7 +103,7 @@ export function ProjectsSection() {
                         </span>
                       ))}
                     </div>
-                    
+
                     <div className="flex justify-between mt-auto">
                       {project.githubLink && (
                         <a 
@@ -136,7 +115,7 @@ export function ProjectsSection() {
                           <Github size={16} className="mr-2" /> View Code
                         </a>
                       )}
-                      
+
                       {project.demoLink && (
                         <a 
                           href={project.demoLink}
@@ -144,10 +123,10 @@ export function ProjectsSection() {
                           rel="noopener noreferrer"
                           className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors font-medium flex items-center"
                         >
-                        
+                          Demo
                         </a>
                       )}
-                      
+
                       {project.researchPaper && (
                         <a 
                           href={project.researchPaper}
@@ -155,16 +134,16 @@ export function ProjectsSection() {
                           rel="noopener noreferrer"
                           className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors font-medium flex items-center"
                         >
-            
+                          Research Paper
                         </a>
                       )}
-                      
+
                       {project.inProgress && (
                         <span className="text-gray-500 dark:text-gray-400 flex items-center">
                           <GitBranch size={16} className="mr-2" /> In Progress
                         </span>
                       )}
-                      
+
                       {project.isHackathon && (
                         <span className="text-gray-500 dark:text-gray-400 flex items-center">
                           <Trophy size={16} className="mr-2" /> Hackathon Project
@@ -177,17 +156,15 @@ export function ProjectsSection() {
             ))}
           </AnimatePresence>
         </motion.div>
-        
-        <div className="text-center mt-12">
-  <a href="https://github.com/palaklohade" target="_blank" rel="noopener noreferrer">
-    <Button size="lg" variant="outline" className="inline-flex items-center shadow-md">
-      View All Projects on GitHub 
-      <Github className="ml-2 w-5 h-5" />
-    </Button>
-  </a>
-</div>
 
-
+        <div className="relative text-center mt-12">
+          <a href="https://github.com/palaklohade" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" variant="outline" className="inline-flex items-center shadow-md">
+              View All Projects on GitHub 
+              <Github className="ml-2 w-5 h-5" />
+            </Button>
+          </a>
+        </div>
       </div>
     </section>
   );

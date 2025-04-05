@@ -11,25 +11,25 @@ export const skillBars: Skill[] = [
   {
     name: "Backend Development",
     description: "Creating robust server-side applications and APIs",
-    color: "secondary",
+    color: "primary",
     icon: "Globe"
   },
   {
     name: "Data Structures & Algorithms",
     description: "Problem-solving and optimization techniques",
-    color: "accent",
+    color: "primary",
     icon: "Binary"
   },
   {
     name: "Database Management",
     description: "Working with MongoDB and Firebase",
-    color: "yellow-500",
+    color: "primary",
     icon: "Database"
   },
   {
     name: "API Development",
     description: "Building and testing RESTful APIs",
-    color: "red-500",
+    color: "primary",
     icon: "Api"
   }
 ];

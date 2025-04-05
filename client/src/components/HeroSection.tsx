@@ -108,22 +108,17 @@ export function HeroSection() {
           </motion.div>
 
           <motion.div 
-            className="order-1 lg:order-2"
+            className="order-1 lg:order-2 z-10"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative">
-<div className="absolute -inset-1 bg-gradient-to-br from-[#0d0d0d] via-[#1a1a2e] to-[#252b48] rounded-full blur-2xl opacity-60"></div>
-
-             <img src="/no-bg (2).png" alt="Palak Lohade" className="w-full max-w-md mx-auto rounded-full shadow-2xl z-10 relative aspect-square object-cover" />
-
-            </div>
+            
           </motion.div>
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block z-10">
         <a 
           href="#about" 
           className="text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-blue-400 transition-colors"

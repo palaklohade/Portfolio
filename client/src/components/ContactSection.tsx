@@ -77,7 +77,7 @@ export function ContactSection() {
         
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
           <motion.div 
-            className="lg:col-span-2"
+            className="lg:col-span-2 z-10"
             ref={el => registerElement(el)}
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
@@ -118,44 +118,44 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Social Profiles</h4>
-                    <div className="flex space-x-4 mt-2">
-                      <a 
-                        href="https://github.com/palaklohade" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-200 cursor-pointer" 
-                        aria-label="GitHub"
-                      >
-                        <Github className="w-6 h-6" stroke="currentColor" />
-                      </a>
-                      <a 
-                        href="https://www.linkedin.com/in/palak-lohade/" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" 
-                        aria-label="LinkedIn"
-                      >
-                        <Linkedin />
-                      </a>
-                      <a 
-                        href="https://x.com/palak_codes" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" 
-                        aria-label="Twitter"
-                      >
-                        <Twitter />
-                      </a>
-                      <a 
-                        href="https://medium.com/@palaklohade04" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" 
-                        aria-label="Medium"
-                      >
-                        <FaMedium />
-                      </a>
-                    </div>
+                          <div className="flex space-x-4 mt-2 ">
+                            <a 
+                              href="https://github.com/palaklohade" 
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-200 cursor-pointer" 
+                              aria-label="GitHub"
+                            >
+                              <Github className="w-6 h-6" stroke="currentColor" />
+                            </a>
+                            <a 
+                              href="https://www.linkedin.com/in/palak-lohade/" 
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" 
+                              aria-label="LinkedIn"
+                            >
+                              <Linkedin />
+                            </a>
+                            <a 
+                              href="https://x.com/palak_codes" 
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" 
+                              aria-label="Twitter"
+                            >
+                              <Twitter />
+                            </a>
+                            <a 
+                              href="https://medium.com/@palaklohade04" 
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" 
+                              aria-label="Medium"
+                            >
+                              <FaMedium />
+                            </a>
+                          </div>
                   </div>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export function ContactSection() {
           </motion.div>
           
           <motion.div 
-            className="lg:col-span-3"
+            className="lg:col-span-3 z-10"
             ref={el => registerElement(el)}
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}

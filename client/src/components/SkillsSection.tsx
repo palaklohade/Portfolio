@@ -38,8 +38,11 @@ export function SkillsSection() {
     >
       <div className="container mx-auto px-6">
         <div className="mb-12" ref={el => registerElement(el)}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">Technical Expertise</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto"></div>
+<h2 className="text-3xl md:text-4xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-black via-gray-700 to-white">
+  Technical Expertise
+</h2>
+
+         <div className="w-20 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

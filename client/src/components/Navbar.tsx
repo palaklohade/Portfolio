@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -62,42 +61,13 @@ export function Navbar() {
             </a>
           ))}
           
-          <ThemeToggle />
+          
         </div>
         
-        <button 
-          className="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        
       </nav>
       
-      <div 
-        className={cn(
-          "md:hidden bg-white dark:bg-gray-900 shadow-lg border-t border-gray-200 dark:border-gray-800 transition-all duration-300",
-          mobileMenuOpen ? "block" : "hidden"
-        )}
-      >
-        <div className="container mx-auto px-4 py-3 flex flex-col space-y-3">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors py-2"
-              onClick={closeMobileMenu}
-            >
-              {link.label}
-            </a>
-          ))}
-          
-          <div className="flex justify-between items-center py-2">
-            <span className="text-gray-600 dark:text-gray-300">Theme</span>
-            <ThemeToggle isMobile />
-          </div>
-        </div>
-      </div>
+      
     </header>
   );
 }

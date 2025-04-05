@@ -42,7 +42,7 @@ export function ExperienceSection() {
           className="mb-12"
           ref={el => registerElement(el)}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Experience & Education</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Education and Extra-Curricular Activities</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
 
